@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Frame from '../layouts/Frame.astro';
+import Accordion from '@components/Accordion.astro';
 import fotoProfilo from '../images/foto_profilo.jpg';
 import photoShop from '../images/adobe_photoshop.png'
 import illustrator from '../images/adobe_illustrator.png'
@@ -20,60 +21,67 @@ import immobiliare from '../images/immobiliare.png'
 
 
 import { CircleAlert, MapPin, Phone, MapPinCheck, Mail, Linkedin, CircleFadingPlus, GraduationCap } from "lucide-preact";
+import ExpScroll from '@components/Exp-scroll.astro';
 
 const pageTitle = "La mia homepage"
 ---
 
 <Frame title= {pageTitle} >
-    <main>
-        <div class="bento-container py-8 h-auto lg:h-screen w-full flex justify-center items-center">
-            <div class="flex flex-col lg:grid lg:grid-cols-10 lg:grid-rows-4 gap-12 h-full w-full p-4">
-                <div id="card-1" class="neu-flat lg:col-span-6 lg:row-span-2 rounded-xl p-4 lg:p-12">
+    <main class="sm:flex sm:justify-center">
+        <div class="bento-container w-full flex justify-center items-center py-8 h-auto sm:max-w-[440px] lg:h-screen lg:max-w-fit ">
+            <div class="flex flex-col lg:grid lg:grid-cols-12 lg:grid-rows-2 gap-8 h-full w-full p-4">
+                <!-- Profilo -->
+                <div id="card-1" class="neu-flat lg:col-span-6 lg:row-span-1 rounded-xl p-4 lg:p-6">
                     <div id="pic" class="flex items-center mb-4">
-                        <div class="lg:p-4">
-                            <img class="w-32 lg:w-60 rounded-lg aspect-square object-cover border border-green-cyber grayscale" src={fotoProfilo.src}>
+                        <div>
+                            <img class="w-32 lg:w-32 rounded-lg aspect-square object-cover border border-green-cyber grayscale" src={fotoProfilo.src}>
                         </div>
                         <div class="pl-4">
                             <div class="neu-up border border-slate-500/50 w-auto lg:w-52 mb-4 rounded-full flex items-center justify-center place-content-between px-4 py-2">
                                 <CircleAlert color="red" size={16} />
                                 <span class="text-white ml-4 text-xs">Attualmente occupato</span>
                             </div>
-                            <h1 class="text-white text-xl lg:text-6xl font-bold lg:mb-4">Andrea Spuri</h1>
-                            <h4 class="text-white text-lg lg:text-3xl ">Web <span class="text-green-cyber">Designer</span></h4>
+                            <h1 class="text-white text-xl lg:text-3xl font-bold lg:mb-2">Andrea Spuri</h1>
+                            <h4 class="text-white text-lg lg:text-xl">Web <span class="text-green-cyber">Designer</span></h4>
                         </div>
                     </div>
-                        <div id="info" class="gap-1 lg:gap-4 flex flex-row flex-wrap">
-                                <div class="neu-up w-auto mb-4 rounded-full flex items-center justify-center place-content-between px-4 py-2">
+                        <div id="info" class="gap-1 lg:gap-2 flex flex-row flex-wrap lg:items-center">
+                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-2 py-2">
                                     <MapPin color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-base">Roma</span>
+                                    <span class="text-white ml-2 text-xs lg:text-md">Roma</span>
                                 </div>
-                                <div class="neu-up w-auto mb-4 rounded-full flex items-center justify-center place-content-between px-4 py-2">
+                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
                                     <Phone color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-base">3923777387</span>
+                                    <span class="text-white ml-2 text-xs lg:text-md">3923777387</span>
                                 </div>
-                                <div class="neu-up w-auto mb-4 rounded-full flex items-center justify-center place-content-between px-4 py-2">
+                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
                                     <MapPinCheck color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-base">Via Vincenzo Petra 151</span>
+                                    <span class="text-white ml-2 text-xs lg:text-md">Via Vincenzo Petra 151</span>
                                 </div>
                             
                             
-                                <div class="neu-up w-auto mb-4 rounded-full flex items-center justify-center place-content-between px-4 py-2">
+                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
                                     <Mail color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-base">spuriandrea@gmail.com</span>
+                                    <span class="text-white ml-2 text-xs lg:text-md">spuriandrea@gmail.com</span>
                                 </div>
-                                <div class="neu-up w-auto mb-4 rounded-full flex items-center justify-center place-content-between px-4 py-2">
+                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
                                     <Linkedin color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-base">linkedin.com/in/andreaspuri</span>
+                                    <span class="text-white ml-2 text-xs lg:text-md">linkedin.com/in/andreaspuri</span>
+                                </div>
+                                <div class="neu-up lg:neu-up-dist w-full border border-slate-500/50 mb-4 lg:m-0 lg:w-[200px] rounded-md flex items-center justify-center place-content-between px-4 py-2 gap-2 mt-4">
+                                    <span class="text-white ml-2 text-xs lg:text-md">SPOILER</span>
+                                    <CircleFadingPlus color="#93fe0e" size={16} />
                                 </div>
                         </div>
-                        <div class="neu-up lg:neu-up-dist w-full border border-slate-500/50 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
-                            <span class="text-white ml-2 text-xs lg:text-base">SPOILER</span>
+                        <div class="neu-up lg:neu-up-dist w-full border border-slate-500/50 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4 lg:hidden">
+                            <span class="text-white ml-2 text-xs lg:text-xs">SPOILER</span>
                             <CircleFadingPlus color="#93fe0e" size={20} />
                         </div>
                 </div>
-                <div id="card-2" class="neu-flat lg:col-span-2 lg:row-span-2 rounded-xl p-8 flex justify-center items-center">
+                <!-- Design -->
+                <div id="card-2" class="neu-flat lg:col-span-3 lg:row-span-1 rounded-xl p-6 flex justify-center items-center">
                     <div id="skills">
-                        <p class="text-3xl text-white text-center font-bold">Grafica</p>
+                        <p class="text-3xl text-white text-center font-bold">Design</p>
                         <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
                             <img class="w-[15%]" src={photoShop.src}/>
                             <span class="text-white ml-2 text-base">Photoshop</span>
@@ -92,7 +100,8 @@ const pageTitle = "La mia homepage"
                         </div>
                     </div>
                 </div>
-                <div id="card-3" class="neu-flat lg:col-span-2 lg:row-span-2 rounded-xl p-8 flex justify-center items-center">
+                <!-- Sviluppo -->
+                <div id="card-3" class="neu-flat lg:col-span-3 lg:row-span-1 rounded-xl p-6 flex justify-center items-center">
                     <div id="skills">
                         <p class="text-3xl text-white text-center font-bold">Sviluppo</p>
                         <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
@@ -118,32 +127,31 @@ const pageTitle = "La mia homepage"
                         </div>
                     </div>
                 </div>
-                <div id="card-4" class="neu-flat lg:col-span-2 lg:row-span-2 rounded-xl p-8">
-                        <p class="text-3xl text-white font-bold mb-4">Formazione</p>
-                    <div class="neu-up w-[40%] lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center pace-content-between px-4 py-2">
+                <!-- Formazione -->
+                <div id="card-4" class="neu-flat lg:col-span-4 lg:row-span-1 rounded-xl p-6">
+                        <p class="text-3xl text-white font-bold mb-4 lg:text-xl">Formazione</p>
+                    <div class="neu-up max-w-fit lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center pace-content-between px-4 py-2">
                         <span class="text-white text-xs">2018 - 2019</span>
                     </div>
-                    <p class="text-2xl text-green-cyber font-bold">LabforTraining</p>
+                    <p class="text-2xl text-green-cyber font-bold lg:text-xl">LabforTraining</p>
                     <p class="text-white text-lg">Corso Web Design (320 ore)</p>
-                    <div class="neu-up w-[40%] lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2 mt-6">
+                    <div class="neu-up lg:w-52 max-w-fit mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2 mt-6">
                         <span class="text-white text-xs">2006 - 2012</span>
                     </div>
-                    <p class="text-2xl text-green-cyber font-bold">Ist Tec. Informatico Giovanni Paolo II</p>
+                    <p class="text-2xl text-green-cyber font-bold lg:text-xl">Ist Tec. Informatico Giovanni Paolo II</p>
                     <p class="text-white text-lg">Diploma Tecnico Informatico</p>
                 </div>
-                <div id="card-5" class="neu-flat lg:col-span-2 lg:row-span-2 rounded-xl p-8 flex items-center">
-                    <div>
-                        <p class="text-3xl text-white font-bold mb-4">Esperienza</p>
-                        <div class="neu-up w-[40%] lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2">
+                <!-- Esperienza -->
+                <div id="card-5" class="neu-flat lg:col-span-4 lg:row-span-1 rounded-xl p-6 flex items-center">
+                    <!-- <div>
+                        <p class="text-xl text-white font-bold mb-4">Esperienza</p>
+                        <div class="neu-up max-w-fit lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2">
                             <span class="text-white text-xs text-center">2024 - att.</span>
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-2">
                             <p class="text-2xl text-green-cyber font-bold">Web Designer</p>
                             <div class="flex items-center gap-4 mt-2">
                                 <p class="text-white text-lg">Immobiliare.it</p>
-                                <div class="neu-inset w-24 lg:w-52 rounded-full flex items-center justify-center place-content-between px-2 py-2">
-                                    <img class="w-[80%] text-center" src={immobiliare.src}>
-                                </div>
                             </div>
                         </div>
                         <ul class="text-white text-sm list-disc list-inside w-full">
@@ -160,16 +168,13 @@ const pageTitle = "La mia homepage"
                                 Integrazione Framework CSS  
                             </li>
                         </ul>
-                        <div class="neu-up w-[40%] lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2 mt-6">
+                        <div class="neu-up max-w-fit lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2 mt-6">
                             <span class="text-white text-xs">2006 - 2012</span>
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-2">
                             <p class="text-2xl text-green-cyber font-bold">Graphic & Web Designer</p>
                             <div class="flex items-center gap-4 mt-2">
                                 <p class="text-white text-lg">Digital360</p>
-                                <div class="neu-inset w-24 lg:w-52 rounded-full flex items-center justify-center place-content-between px-2 py-2">
-                                    <img class="w-[80%] text-center" src={digital360.src}>
-                                </div>
                             </div>
                         </div>
                         <ul class="text-white text-sm list-disc list-inside w-full">
@@ -189,87 +194,13 @@ const pageTitle = "La mia homepage"
                                 Gestione siti per eventi aziendali
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
+                    <ExpScroll/>
                 </div>
-                <div id="card-6" class="neu-flat lg:col-span-2 lg:row-span-2 rounded-xl p-8 items-center">
-                    <p class="text-3xl text-white font-bold mb-4">Certificazioni</p>
-                    <div class="neu-up w-[30%] lg:w-52 mb-4 border border-slate-100/10 rounded-md flex items-center justify-center place-content-between px-4 py-2">
-                        <span class="text-white text-xs">2024</span>
-                    </div>
-                    <div id="row" class="flex items-center gap-4 mb-4">
-                        <p class="text-lg text-green-cyber font-bold">UX/UI Design Start</p>
-                        <div class="neu-inset w-24 lg:w-52 rounded-full flex items-center justify-center place-content-between px-2 py-2">
-                            <img class="w-[70%] text-center" src={eyestudio.src}>
-                        </div>
-                    </div>
-                    <ul class="text-white text-sm list-disc list-inside w-full mb-6">
-                        <li>
-                            Basi della User Experience
-                        </li>
-                        <li>
-                            Wireframing e sviluppo User Interface
-                        </li>
-                        <li>
-                            Gestione del Design System
-                        </li>
-                        <li>
-                            Basi della Prototipazione 
-                        </li>
-                    </ul>
-                    <div class="neu-up w-[30%] lg:w-52 mb-4 border border-slate-100/10 rounded-md flex items-center justify-center place-content-between px-4 py-2">
-                        <span class="text-white text-xs">2023</span>
-                    </div>
-                    <div id="row" class="flex items-center gap-4 mb-4">
-                        <p class="text-lg text-green-cyber font-bold">Hubspot CMS</p>
-                            <div class="neu-inset w-24 lg:w-52 rounded-full flex items-center justify-center place-content-between px-2 py-2">
-                                <img class="w-[60%] text-center" src={hubspot.src}>
-                            </div>
-                    </div>
-                    <ul class="text-white text-sm list-disc list-inside w-full mb-6">
-                        <li>
-                            Sviluppo di un template drag&drop
-                        </li>
-                        <li>
-                            Sviluppo di web asset tramite CMS
-                        </li>
-                        <li>
-                            Integrazione di HubL
-                        </li>
-                    </ul>
-                    <div class="neu-up w-[30%] lg:w-52 mb-4 border border-slate-100/10 rounded-md flex items-center justify-center place-content-between px-4 py-2">
-                        <span class="text-white text-xs">2022</span>
-                    </div>
-                    <div id="row" class="flex items-center gap-4 mb-4">
-                        <p class="text-lg text-green-cyber font-bold">Boolean Coding Week</p>
-                            <div class="neu-inset w-24 lg:w-52 rounded-full flex items-center justify-center place-content-between px-2 py-2">
-                                <img class="w-[80%] text-center" src={boolean.src}>
-                            </div>
-                    </div>
-                    <ul class="text-white text-sm list-disc list-inside w-full mb-6">
-                        <li>
-                            Creazione di una mini applicazione in JS
-                        </li>
-                        <li>
-                            Layout e stile tramite HTML e CSS
-                        </li>
-                    </ul>
-                    <div id="row" class="flex items-center gap-4 mb-4">
-                        <p class="text-lg text-green-cyber font-bold">HTML5 e CSS3</p>
-                            <div class="neu-inset w-24 lg:w-52 rounded-full flex items-center justify-center place-content-between px-2 py-2">
-                                <img class="w-[50%] text-center" src={udemy.src}>
-                            </div>
-                    </div>
-                    <ul class="text-white text-sm list-disc list-inside w-full mb-6">
-                        <li>
-                            Corso completo su HTML e CSS
-                        </li>
-                        <li>
-                            Layout tramite Bootstrap
-                        </li>
-                        <li>
-                            SCSS a implementazioni variabili
-                        </li>
-                    </ul>
+                <!-- Certificazioni -->
+                <div id="card-6" class="neu-flat lg:col-span-4 lg:row-span-1 rounded-xl p-6 items-center">
+                    <p class="text-xl text-white font-bold mb-4">Certificazioni</p>
+                    <Accordion />
                 </div>
             </div>
         </div>
