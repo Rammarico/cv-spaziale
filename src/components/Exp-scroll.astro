@@ -1,0 +1,92 @@
+---
+
+---
+
+<div class="div-padre">
+    <p class="text-xl text-white font-bold mb-4">Esperienza</p>
+    <div class="tooltip hidden absolute top-0 text-xs px-2 py-1 bg-slate-400">
+
+        Puoi scrollare!
+
+    </div>
+    <div class="div-figlio">
+        <div class="neu-up max-w-fit lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2">
+            <span class="text-white text-xs text-center">2024 - att.</span>
+        </div>
+        <div class="mb-2">
+            <p class="text-2xl text-green-cyber font-bold">Web Designer</p>
+            <div class="flex items-center gap-4 mt-2">
+                <p class="text-white text-lg">Immobiliare.it</p>
+            </div>
+        </div>
+        <ul class="text-white text-sm list-disc list-inside w-full">
+            <li>
+                Creazione di User Interface
+            </li>
+            <li>
+                Sviluppo template e temi Wordpress
+            </li>
+            <li>
+                Gestione Design System
+            </li>
+            <li>
+                Integrazione Framework CSS  
+            </li>
+        </ul>
+        <div class="neu-up max-w-fit lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2 mt-6">
+            <span class="text-white text-xs">2006 - 2012</span>
+        </div>
+        <div class="mb-2">
+            <p class="text-2xl text-green-cyber font-bold">Graphic & Web Designer</p>
+            <div class="flex items-center gap-4 mt-2">
+                <p class="text-white text-lg">Digital360</p>
+            </div>
+        </div>
+        <ul class="text-white text-sm list-disc list-inside w-full">
+            <li>
+                Creatività ADV
+            </li>
+            <li>
+                Sviluppo template DEM
+            </li>
+            <li>
+                Creazione template landing pageq
+            </li>
+            <li>
+                Impaginazione Whitepaper  
+            </li>
+            <li>
+                Gestione siti per eventi aziendali
+            </li>
+        </ul>
+    </div>
+    </div>
+
+<style>
+.div-padre {
+        @apply w-full h-full overflow-hidden relative;
+}
+.div-figlio {
+    @apply h-[80%] overflow-y-auto border-t border-slate-500/50 pt-4 px-2;
+    scrollbar-width: none;
+}
+</style>
+
+<script>
+import $ from 'jquery';
+
+$(document).ready(function() {
+// Mostra il tooltip al passaggio del mouse sul div padre
+$('.div-padre').hover(
+    function() {
+        $('.tooltip').fadeIn(200); // Mostra il tooltip
+
+    },
+    function() {
+
+        $('.tooltip').fadeOut(200); // Nasconde il tooltip
+    }
+);
+
+});
+</script>
