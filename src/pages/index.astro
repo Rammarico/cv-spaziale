@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import Frame from '../layouts/Frame.astro';
-import Accordion from '@components/Accordion.astro';
 import fotoProfilo from '../images/foto_profilo.jpg';
 import photoShop from '../images/adobe_photoshop.png'
 import illustrator from '../images/adobe_illustrator.png'
@@ -18,10 +17,13 @@ import boolean from '../images/boolean.png'
 import udemy from '../images/udemy.png'
 import digital360 from '../images/digital360.png'
 import immobiliare from '../images/immobiliare.png'
+import Accordion from '@components/Accordion.astro';
+import ExpScroll from '@components/Exp-scroll.astro';
+import CertScroll from '@components/Cert-scroll.astro';
 
 
 import { CircleAlert, MapPin, Phone, MapPinCheck, Mail, Linkedin, CircleFadingPlus, GraduationCap } from "lucide-preact";
-import ExpScroll from '@components/Exp-scroll.astro';
+
 
 const pageTitle = "La mia homepage"
 ---
@@ -199,8 +201,8 @@ const pageTitle = "La mia homepage"
                 </div>
                 <!-- Certificazioni -->
                 <div id="card-6" class="neu-flat lg:col-span-4 lg:row-span-1 rounded-xl p-6 items-center">
-                    <p class="text-xl text-white font-bold mb-4">Certificazioni</p>
-                    <Accordion />
+                    <Accordion/>
+                    <CertScroll/>
                 </div>
             </div>
         </div>
