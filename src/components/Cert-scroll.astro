@@ -1,0 +1,109 @@
+---
+import eyestudio from '../images/eyestudios.png'
+import hubspot from '../images/hubspot.png'
+import boolean from '../images/boolean.png'
+import udemy from '../images/udemy.png'
+---
+
+<div class="container-cert w-full h-full overflow-hidden relative">
+    <p class="text-xl text-white font-bold mb-4">Esperienza</p>
+    <div class="tooltip-cert hidden absolute top-0 right-0 text-xs text-white rounded-md px-2 py-1 border border-500/20">
+        Puoi scrollare!
+    </div>
+    <div class="wrapper px-2 py-2">
+        <div class="mb-2">
+            <p class="text-2xl text-green-cyber font-bold">UX/UI Design Start</p>
+            <span class="neu-inset w-24 lg:w-28 rounded-full flex items-center justify-center place-content-between px-2 py-1 mt-1 mb-2">
+                <img class="w-[80%] text-center" src={eyestudio.src}>
+            </span>
+        </div>
+        <ul class="text-white text-sm list-disc list-inside w-full mb-6">
+            <li>
+                Basi della User Experience
+            </li>
+            <li>
+                Wireframing e sviluppo User Interface
+            </li>
+            <li>
+                Gestione del Design System
+            </li>
+            <li>
+                Basi della Prototipazione 
+            </li>
+        </ul>
+        <div class="mb-2">
+            <p class="text-2xl text-green-cyber font-bold">Hubspot CMS</p>
+            <span class="neu-inset w-24 lg:w-28 rounded-full flex items-center justify-center place-content-between px-2 py-1 mt-1 mb-2">
+                <img class="w-[60%] text-center" src={hubspot.src}>
+            </span>
+        </div>
+        <ul class="text-white text-sm list-disc list-inside w-full mb-6">
+            <li>
+                Sviluppo di un template drag&drop
+            </li>
+            <li>
+                Sviluppo di web asset tramite CMS
+            </li>
+            <li>
+                Integrazione di HubL
+            </li>
+        </ul>
+        <div class="mb-2">
+            <p class="text-2xl text-green-cyber font-bold">Boolean Coding Week</p>
+            <span class="neu-inset w-24 lg:w-28 rounded-full flex items-center justify-center place-content-between px-2 py-1 mt-1 mb-2">
+                <img class="w-[80%] text-center" src={boolean.src}>
+            </span>
+        </div>
+        <ul class="text-white text-sm list-disc list-inside w-full mb-6">
+            <li>
+                Creazione di una mini applicazione in JS
+            </li>
+            <li>
+                Layout e stile tramite HTML e CSS
+            </li>
+        </ul>
+        <div class="mb-2">
+            <p class="text-2xl text-green-cyber font-bold mb-2">HTML e CSS3HTML e CSS3</p>
+            <span class="neu-inset w-24 lg:w-22 rounded-full flex items-center justify-center place-content-between px-2 py-1 mt-1 mb-2">
+                <img class="w-[55%] text-center" src={udemy.src}>
+            </span>
+        </div>
+        <ul class="text-white text-sm list-disc list-inside w-full mb-6">
+            <li>
+                Corso completo su HTML e CSS
+            </li>
+            <li>
+                Layout tramite Bootstrap
+            </li>
+            <li>
+                SCSS a implementazioni variabili
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+.wrapper {
+    @apply h-[80%] overflow-y-auto border-y border-slate-500/50;
+    scrollbar-width: none;
+}
+</style>
+
+<script>
+import $ from 'jquery';
+
+$(document).ready(function() {
+// Mostra il tooltip al passaggio del mouse sul div padre
+$('.container-cert').hover(
+    function() {
+        $('.tooltip-cert').fadeIn(200); // Mostra il tooltip
+
+    },
+    function() {
+
+        $('.tooltip-cert').fadeOut(200); // Nasconde il tooltip
+    }
+);
+
+});
+</script>

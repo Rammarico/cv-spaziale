@@ -2,14 +2,12 @@
 
 ---
 
-<div class="div-padre">
+<div class="container-exp">
     <p class="text-xl text-white font-bold mb-4">Esperienza</p>
-    <div class="tooltip hidden absolute top-0 text-xs px-2 py-1 bg-slate-400">
-
+    <div class="tooltip-exp hidden absolute top-0 right-0 text-xs text-white rounded-md px-2 py-1 border border-500/20">
         Puoi scrollare!
-
     </div>
-    <div class="div-figlio">
+    <div class="wrapper px-2 py-2">
         <div class="neu-up max-w-fit lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2">
             <span class="text-white text-xs text-center">2024 - att.</span>
         </div>
@@ -63,11 +61,11 @@
     </div>
 
 <style>
-.div-padre {
+.container-exp {
         @apply w-full h-full overflow-hidden relative;
 }
-.div-figlio {
-    @apply h-[80%] overflow-y-auto border-t border-slate-500/50 pt-4 px-2;
+.wrapper {
+    @apply h-[80%] overflow-y-auto border-y border-slate-500/50 py-4 px-2;
     scrollbar-width: none;
 }
 </style>
@@ -77,14 +75,14 @@ import $ from 'jquery';
 
 $(document).ready(function() {
 // Mostra il tooltip al passaggio del mouse sul div padre
-$('.div-padre').hover(
+$('.container-exp').hover(
     function() {
-        $('.tooltip').fadeIn(200); // Mostra il tooltip
+        $('.tooltip-exp').fadeIn(200); // Mostra il tooltip
 
     },
     function() {
 
-        $('.tooltip').fadeOut(200); // Nasconde il tooltip
+        $('.tooltip-exp').fadeOut(200); // Nasconde il tooltip
     }
 );
 
