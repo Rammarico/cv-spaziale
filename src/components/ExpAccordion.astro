@@ -1,0 +1,116 @@
+---
+import eyestudio from '../images/eyestudios.png'
+import hubspot from '../images/hubspot.png'
+import boolean from '../images/boolean.png'
+import udemy from '../images/udemy.png'
+import immoLogo from "../images/immo-neg.png"
+import digital360Logo from "../images/digital360-neg.png"
+---
+
+<!-- Accordion start -->
+<ul class="accordion w-full block lg:hidden">
+    <p class="text-3xl text-white font-bold mb-4">Esperienza</p>
+    <!-- List -->
+    <li class="cursor-pointer mb-4">
+        <!-- Row -->
+            <span class="text-green-cyber flex place-content-between items-center w-auto">
+                <span class="flex gap-2">
+                    <p class="font-bold text-lg">Web Designer</p>
+                    <!-- Badge -->
+                    <span class="neu-up w-auto lg:w-52 border border-slate-100/10 rounded-md flex items-center justify-self-start justify-center place-content-between px-2 py-1">
+                        <span class="text-white text-xs">2024-att</span>
+                    </span>
+                </span>
+                <svg class="text-green-cyber mr-1 justify-self-end"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                </svg>
+            </span>
+        <div id="list" class="text-gray-500 text-md">
+            <span class="neu-inset border border-green-cyber/50 w-24 lg:w-52 rounded-full flex items-center justify-center place-content-between px-2 py-1 mt-1 mb-2">
+                <img class="h-[14px] text-center" src={immoLogo.src}>
+            </span>
+            <ul class="text-white text-sm list-disc list-inside w-full mb-6">
+                <li>
+                    Creazione di User Interface
+                </li>
+                <li>
+                    Sviluppo template e temi Wordpress
+                </li>
+                <li>
+                    Gestione Design System
+                </li>
+                <li>
+                    Integrazione Framework CSS
+                </li>
+            </ul>
+        </div>
+    </li>
+        <li class="cursor-pointer my-1 mb-4">
+            <!-- Row -->
+            
+                <span class="text-green-cyber flex place-content-between items-center w-auto">
+                    <span class="flex gap-2">
+                        <p class="font-bold text-lg">Digital360</p>
+                        <!-- Badge -->
+                        <span class="neu-up w-auto lg:w-52 border border-slate-100/10 rounded-md flex items-center justify-self-start justify-center place-content-between px-2 py-1">
+                            <span class="text-white text-xs">2021</span>
+                        </span>
+                    </span>
+                    <svg class="text-green-cyber mr-1 justify-self-end"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                </span>
+            <div id="list" class="text-gray-500 text-md">
+                <span class="neu-inset border border-green-cyber/50 w-24 lg:w-52 rounded-full flex items-center justify-center place-content-between px-2 py-1 mt-1 mb-2">
+                    <img class="h-[14px] text-center" src={digital360Logo.src}>
+                </span>
+                <ul class="text-white text-sm list-disc list-inside w-full mb-6">
+                    <li>
+                        Creatività ADV
+                    </li>
+                    <li>
+                        Sviluppo template DEM
+                    </li>
+                    <li>
+                        Creazione template landing page
+                    </li>
+                    <li>
+                        Impaginazione Whitepaper
+                    </li>
+                </ul>
+            </div>
+        </li>
+</ul>
+<!-- Accordion end -->
+
+
+<style>
+.accordion li > div {
+display: none;
+}
+
+.accordion .flipY {
+transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.accordion svg {
+transition: all 1s cubic-bezier(0, .5, 0, 1);
+}
+</style>
+
+<script>
+// Questo script verrà inviato al browser
+// import $ from 'jquery';
+
+// $(document).on('click', '.accordion li', function(e) {
+// // Trova il div all'interno dell'elemento cliccato e applica slideToggle
+// $(this).find('div').slideToggle();
+// // Trova l'elemento svg all'interno dell'elemento cliccato e applica toggleClass
+// $(this).find('svg').toggleClass('flipY');
+// // Scorri la pagina fino all'elemento cliccato
+// $('html, body').animate({
+//     scrollTop: $(this).offset().top
+// }, 500); // 500 è la durata dell'animazione in millisecondi
+
+// });
+</script>

@@ -17,12 +17,14 @@ import boolean from '../images/boolean.png'
 import udemy from '../images/udemy.png'
 import digital360 from '../images/digital360.png'
 import immobiliare from '../images/immobiliare.png'
-import Accordion from '@components/Accordion.astro';
-import ExpScroll from '@components/Exp-scroll.astro';
-import CertScroll from '@components/Cert-scroll.astro';
+import Accordion from '@components/ExpAccordion.astro';
+import ExpScroll from '@components/ExpScroll.astro';
+import CertScroll from '@components/CertScroll.astro';
+import CertAccordion from '@components/CertAccordion.astro';
 
 
 import { CircleAlert, MapPin, Phone, MapPinCheck, Mail, Linkedin, CircleFadingPlus, GraduationCap } from "lucide-preact";
+import ExpAccordion from '@components/ExpAccordion.astro';
 
 
 const pageTitle = "La mia homepage"
@@ -74,29 +76,27 @@ const pageTitle = "La mia homepage"
                                     <span class="text-white ml-2 text-xs lg:text-md">SPOILER</span>
                                     <CircleFadingPlus color="#93fe0e" size={16} />
                                 </div>
-                        </div>
-                        <div class="neu-up lg:neu-up-dist w-full border border-slate-500/50 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4 lg:hidden">
-                            <span class="text-white ml-2 text-xs lg:text-xs">SPOILER</span>
-                            <CircleFadingPlus color="#93fe0e" size={20} />
+
+                                <!-- Modale -->
                         </div>
                 </div>
                 <!-- Design -->
                 <div id="card-2" class="neu-flat lg:col-span-3 lg:row-span-1 rounded-xl p-6 flex justify-center items-center">
                     <div id="skills">
-                        <p class="text-3xl text-white text-center font-bold">Design</p>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
+                        <p class="text-3xl lg:text-xl text-white text-center font-bold">Design</p>
+                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
                             <img class="w-[15%]" src={photoShop.src}/>
                             <span class="text-white ml-2 text-base">Photoshop</span>
                         </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
+                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
                             <img class="w-[15%]" src={illustrator.src}/>
                             <span class="text-white ml-2 text-base">Illustrator</span>
                         </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
+                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
                             <img class="w-[15%]" src={inDesign.src}/>
                             <span class="text-white ml-2 text-base">InDesign</span>
                         </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
+                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
                             <img class="w-[15%]" src={figma.src}/>
                             <span class="text-white ml-2 text-base">Figma</span>
                         </div>
@@ -105,28 +105,28 @@ const pageTitle = "La mia homepage"
                 <!-- Sviluppo -->
                 <div id="card-3" class="neu-flat lg:col-span-3 lg:row-span-1 rounded-xl p-6 flex justify-center items-center">
                     <div id="skills">
-                        <p class="text-3xl text-white text-center font-bold">Sviluppo</p>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
+                        <p class="text-3xl lg:text-xl text-white text-center font-bold">Sviluppo</p>
+                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
                             <img class="w-[15%]" src={html5.src}/>
                             <span class="text-white ml-2 text-base">HTML 5</span>
                         </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
+                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
                             <img class="w-[15%]" src={css3.src}/>
                             <span class="text-white ml-2 text-base">CSS 3</span>
                         </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
+                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
                             <img class="w-[15%]" src={wordPress.src}/>
                             <span class="text-white ml-2 text-base">Wordpress</span>
                         </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
+                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
                             <img class="w-[15%]" src={tailWind.src}/>
                             <span class="text-white ml-2 text-base">Tailwind CSS</span>
                         </div>
-                        <div class="neu-up w-auto relative border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 gap-2 mt-4">
+                        <!-- <div class="neu-up w-auto relative border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
                             <img class="w-[15%]" src={astro.src}/>
                             <span class="text-white ml-2 text-base">Astro</span>
                             <span class="absolute top-0 -right-4 bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400">Bonus</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- Formazione -->
@@ -144,64 +144,13 @@ const pageTitle = "La mia homepage"
                     <p class="text-white text-lg">Diploma Tecnico Informatico</p>
                 </div>
                 <!-- Esperienza -->
-                <div id="card-5" class="neu-flat lg:col-span-4 lg:row-span-1 rounded-xl p-6 flex items-center">
-                    <!-- <div>
-                        <p class="text-xl text-white font-bold mb-4">Esperienza</p>
-                        <div class="neu-up max-w-fit lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2">
-                            <span class="text-white text-xs text-center">2024 - att.</span>
-                        </div>
-                        <div class="mb-2">
-                            <p class="text-2xl text-green-cyber font-bold">Web Designer</p>
-                            <div class="flex items-center gap-4 mt-2">
-                                <p class="text-white text-lg">Immobiliare.it</p>
-                            </div>
-                        </div>
-                        <ul class="text-white text-sm list-disc list-inside w-full">
-                            <li>
-                                Creazione di User Interface
-                            </li>
-                            <li>
-                                Sviluppo template e temi Wordpress
-                            </li>
-                            <li>
-                                Gestione Design System
-                            </li>
-                            <li>
-                                Integrazione Framework CSS  
-                            </li>
-                        </ul>
-                        <div class="neu-up max-w-fit lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2 mt-6">
-                            <span class="text-white text-xs">2006 - 2012</span>
-                        </div>
-                        <div class="mb-2">
-                            <p class="text-2xl text-green-cyber font-bold">Graphic & Web Designer</p>
-                            <div class="flex items-center gap-4 mt-2">
-                                <p class="text-white text-lg">Digital360</p>
-                            </div>
-                        </div>
-                        <ul class="text-white text-sm list-disc list-inside w-full">
-                            <li>
-                                Creatività ADV
-                            </li>
-                            <li>
-                                Sviluppo template DEM
-                            </li>
-                            <li>
-                                Creazione template landing pageq
-                            </li>
-                            <li>
-                                Impaginazione Whitepaper  
-                            </li>
-                            <li>
-                                Gestione siti per eventi aziendali
-                            </li>
-                        </ul>
-                    </div> -->
+                <div id="card-5" class="neu-flat lg:col-span-4 lg:row-span-1 rounded-xl p-6 lg:flex items-center">
                     <ExpScroll/>
+                    <ExpAccordion/>
                 </div>
                 <!-- Certificazioni -->
                 <div id="card-6" class="neu-flat lg:col-span-4 lg:row-span-1 rounded-xl p-6 items-center">
-                    <Accordion/>
+                    <CertAccordion/>
                     <CertScroll/>
                 </div>
             </div>
@@ -211,4 +160,5 @@ const pageTitle = "La mia homepage"
 
     <script>
       import "../scripts/menu.js";
+
     </script>
