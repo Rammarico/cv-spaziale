@@ -23,7 +23,7 @@ import CertScroll from '@components/CertScroll.astro';
 import CertAccordion from '@components/CertAccordion.astro';
 
 
-import { CircleAlert, MapPin, Phone, MapPinCheck, Mail, Linkedin, CircleFadingPlus, GraduationCap } from "lucide-preact";
+import { CircleAlert, MapPin, Phone, MapPinCheck, Mail, Linkedin, CircleFadingPlus, GraduationCap, Accessibility } from "lucide-preact";
 import ExpAccordion from '@components/ExpAccordion.astro';
 
 
@@ -72,12 +72,25 @@ const pageTitle = "La mia homepage"
                                     <Linkedin color="#93fe0e" size={16} />
                                     <span class="text-white ml-2 text-xs lg:text-md">linkedin.com/in/andreaspuri</span>
                                 </div>
-                                <div class="neu-up lg:neu-up-dist w-full border border-slate-500/50 mb-4 lg:m-0 lg:w-[200px] rounded-md flex items-center justify-center place-content-between px-4 py-2 gap-2 mt-4">
+                                <button onclick="my_modal_1.showModal()" class="btn neu-up lg:neu-up-dist w-full border border-slate-500/50 mb-4 lg:m-0 lg:w-[200px] rounded-md flex items-center justify-center place-content-between px-4 py-2 gap-2 mt-4">
                                     <span class="text-white ml-2 text-xs lg:text-md">SPOILER</span>
                                     <CircleFadingPlus color="#93fe0e" size={16} />
-                                </div>
+                                </button>
 
                                 <!-- Modale -->
+                                <dialog id="my_modal_1" class="modal">
+                                <div class="modal-box bg-background">
+                                    <Accessibility class="flex" />
+                                    <h3 class="text-lg font-bold flex">Piccolo Spoiler</h3>
+                                    <p class="py-4">Appartenente alle categorie protette Legge 69/99</p>
+                                    <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn bg-green-cyber text-background">Close</button>
+                                    </form>
+                                    </div>
+                                </div>
+                                </dialog>
                         </div>
                 </div>
                 <!-- Design -->
