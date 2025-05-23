@@ -8,7 +8,7 @@ import digital360Logo from "../images/digital360-neg.png"
 ---
 
 <!-- Accordion start -->
-<ul class="accordion w-full block lg:hidden">
+<ul class="accordion-exp w-full block lg:hidden">
     <p class="text-3xl text-white font-bold mb-4">Esperienza</p>
     <!-- List -->
     <li class="cursor-pointer mb-4">
@@ -85,32 +85,32 @@ import digital360Logo from "../images/digital360-neg.png"
 
 
 <style>
-.accordion li > div {
+.accordion-exp li > div {
 display: none;
 }
 
-.accordion .flipY {
+.accordion-exp .flipY {
 transform: rotate3d(1, 0, 0, 180deg);
 }
 
-.accordion svg {
+.accordion-exp svg {
 transition: all 1s cubic-bezier(0, .5, 0, 1);
 }
 </style>
 
 <script>
 // Questo script verrà inviato al browser
-// import $ from 'jquery';
+import $ from 'jquery';
 
-// $(document).on('click', '.accordion li', function(e) {
-// // Trova il div all'interno dell'elemento cliccato e applica slideToggle
-// $(this).find('div').slideToggle();
-// // Trova l'elemento svg all'interno dell'elemento cliccato e applica toggleClass
-// $(this).find('svg').toggleClass('flipY');
-// // Scorri la pagina fino all'elemento cliccato
-// $('html, body').animate({
-//     scrollTop: $(this).offset().top
-// }, 500); // 500 è la durata dell'animazione in millisecondi
+$(document).on('click', '.accordion-exp li', function(e) {
+// Trova il div all'interno dell'elemento cliccato e applica slideToggle
+$(this).find('div').slideToggle();
+// Trova l'elemento svg all'interno dell'elemento cliccato e applica toggleClass
+$(this).find('svg').toggleClass('flipY');
+// Scorri la pagina fino all'elemento cliccato
+$('html, body').animate({
+    scrollTop: $(this).offset().top
+}, 500); // 500 è la durata dell'animazione in millisecondi
 
-// });
+});
 </script>

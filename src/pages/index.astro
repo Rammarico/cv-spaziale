@@ -1,30 +1,15 @@
 ---
 import '../styles/global.css';
 import Frame from '../layouts/Frame.astro';
-import fotoProfilo from '../images/foto_profilo.jpg';
-import photoShop from '../images/adobe_photoshop.png'
-import illustrator from '../images/adobe_illustrator.png'
-import inDesign from '../images/adobe_indesign.png'
-import figma from '../images/figma.png'
-import html5 from '../images/html_5.png'
-import css3 from '../images/css_3.png'
-import wordPress from '../images/wordpress.png'
-import tailWind from '../images/tailwind.png'
-import astro from '../images/astro.png'
-import eyestudio from '../images/eyestudios.png'
-import hubspot from '../images/hubspot.png'
-import boolean from '../images/boolean.png'
-import udemy from '../images/udemy.png'
-import digital360 from '../images/digital360.png'
-import immobiliare from '../images/immobiliare.png'
-import Accordion from '@components/ExpAccordion.astro';
 import ExpScroll from '@components/ExpScroll.astro';
 import CertScroll from '@components/CertScroll.astro';
 import CertAccordion from '@components/CertAccordion.astro';
-
-
-import { CircleAlert, MapPin, Phone, MapPinCheck, Mail, Linkedin, CircleFadingPlus, GraduationCap, Accessibility } from "lucide-preact";
+import Profile from '@components/Profile.astro'
+import Design from '@components/Design.astro'
+import Skills from '@components/Skills.astro'
+import Formation from '@components/Formation.astro';
 import ExpAccordion from '@components/ExpAccordion.astro';
+import FormationAccordion from '@components/FormationAccordion.astro';
 
 
 const pageTitle = "La mia homepage"
@@ -36,125 +21,20 @@ const pageTitle = "La mia homepage"
             <div class="flex flex-col lg:grid lg:grid-cols-12 lg:grid-rows-2 gap-8 h-full w-full p-4">
                 <!-- Profilo -->
                 <div id="card-1" class="neu-flat lg:col-span-6 lg:row-span-1 rounded-xl p-4 lg:p-6">
-                    <div id="pic" class="flex items-center mb-4">
-                        <div>
-                            <img class="w-32 lg:w-32 rounded-lg aspect-square object-cover border border-green-cyber grayscale" src={fotoProfilo.src}>
-                        </div>
-                        <div class="pl-4">
-                            <div class="neu-up border border-slate-500/50 w-auto lg:w-52 mb-4 rounded-full flex items-center justify-center place-content-between px-4 py-2">
-                                <CircleAlert color="red" size={16} />
-                                <span class="text-white ml-4 text-xs">Attualmente occupato</span>
-                            </div>
-                            <h1 class="text-white text-xl lg:text-3xl font-bold lg:mb-2">Andrea Spuri</h1>
-                            <h4 class="text-white text-lg lg:text-xl">Web <span class="text-green-cyber">Designer</span></h4>
-                        </div>
-                    </div>
-                        <div id="info" class="gap-1 lg:gap-2 flex flex-row flex-wrap lg:items-center">
-                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-2 py-2">
-                                    <MapPin color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-md">Roma</span>
-                                </div>
-                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
-                                    <Phone color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-md">3923777387</span>
-                                </div>
-                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
-                                    <MapPinCheck color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-md">Via Vincenzo Petra 151</span>
-                                </div>
-                            
-                            
-                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
-                                    <Mail color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-md">spuriandrea@gmail.com</span>
-                                </div>
-                                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
-                                    <Linkedin color="#93fe0e" size={16} />
-                                    <span class="text-white ml-2 text-xs lg:text-md">linkedin.com/in/andreaspuri</span>
-                                </div>
-                                <button onclick="my_modal_1.showModal()" class="btn neu-up lg:neu-up-dist w-full border border-slate-500/50 mb-4 lg:m-0 lg:w-[200px] rounded-md flex items-center justify-center place-content-between px-4 py-2 gap-2 mt-4">
-                                    <span class="text-white ml-2 text-xs lg:text-md">SPOILER</span>
-                                    <CircleFadingPlus color="#93fe0e" size={16} />
-                                </button>
-
-                                <!-- Modale -->
-                                <dialog id="my_modal_1" class="modal">
-                                <div class="modal-box bg-background">
-                                    <Accessibility class="flex" />
-                                    <h3 class="text-lg font-bold flex">Piccolo Spoiler</h3>
-                                    <p class="py-4">Appartenente alle categorie protette Legge 69/99</p>
-                                    <div class="modal-action">
-                                    <form method="dialog">
-                                        <!-- if there is a button in form, it will close the modal -->
-                                        <button class="btn bg-green-cyber text-background">Close</button>
-                                    </form>
-                                    </div>
-                                </div>
-                                </dialog>
-                        </div>
+                <Profile/>
                 </div>
                 <!-- Design -->
                 <div id="card-2" class="neu-flat lg:col-span-3 lg:row-span-1 rounded-xl p-6 flex justify-center items-center">
-                    <div id="skills">
-                        <p class="text-3xl lg:text-xl text-white text-center font-bold">Design</p>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
-                            <img class="w-[15%]" src={photoShop.src}/>
-                            <span class="text-white ml-2 text-base">Photoshop</span>
-                        </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
-                            <img class="w-[15%]" src={illustrator.src}/>
-                            <span class="text-white ml-2 text-base">Illustrator</span>
-                        </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
-                            <img class="w-[15%]" src={inDesign.src}/>
-                            <span class="text-white ml-2 text-base">InDesign</span>
-                        </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
-                            <img class="w-[15%]" src={figma.src}/>
-                            <span class="text-white ml-2 text-base">Figma</span>
-                        </div>
-                    </div>
+                <Design/>
                 </div>
                 <!-- Sviluppo -->
                 <div id="card-3" class="neu-flat lg:col-span-3 lg:row-span-1 rounded-xl p-6 flex justify-center items-center">
-                    <div id="skills">
-                        <p class="text-3xl lg:text-xl text-white text-center font-bold">Sviluppo</p>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
-                            <img class="w-[15%]" src={html5.src}/>
-                            <span class="text-white ml-2 text-base">HTML 5</span>
-                        </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
-                            <img class="w-[15%]" src={css3.src}/>
-                            <span class="text-white ml-2 text-base">CSS 3</span>
-                        </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
-                            <img class="w-[15%]" src={wordPress.src}/>
-                            <span class="text-white ml-2 text-base">Wordpress</span>
-                        </div>
-                        <div class="neu-up w-auto border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
-                            <img class="w-[15%]" src={tailWind.src}/>
-                            <span class="text-white ml-2 text-base">Tailwind CSS</span>
-                        </div>
-                        <!-- <div class="neu-up w-auto relative border border-slate-500/20 mb-4 rounded-xl flex items-center justify-center place-content-between px-6 py-4 lg:px-4 lg:py-2 gap-2 mt-4">
-                            <img class="w-[15%]" src={astro.src}/>
-                            <span class="text-white ml-2 text-base">Astro</span>
-                            <span class="absolute top-0 -right-4 bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-gray-700 dark:text-green-400 border border-green-400">Bonus</span>
-                        </div> -->
-                    </div>
+                    <Skills/>
                 </div>
                 <!-- Formazione -->
                 <div id="card-4" class="neu-flat lg:col-span-4 lg:row-span-1 rounded-xl p-6">
-                        <p class="text-3xl text-white font-bold mb-4 lg:text-xl">Formazione</p>
-                    <div class="neu-up max-w-fit lg:w-52 mb-4 rounded-md border border-slate-100/10  flex items-center justify-center pace-content-between px-4 py-2">
-                        <span class="text-white text-xs">2018 - 2019</span>
-                    </div>
-                    <p class="text-2xl text-green-cyber font-bold lg:text-xl">LabforTraining</p>
-                    <p class="text-white text-lg">Corso Web Design (320 ore)</p>
-                    <div class="neu-up lg:w-52 max-w-fit mb-4 rounded-md border border-slate-100/10  flex items-center justify-center place-content-between px-4 py-2 mt-6">
-                        <span class="text-white text-xs">2006 - 2012</span>
-                    </div>
-                    <p class="text-2xl text-green-cyber font-bold lg:text-xl">Ist Tec. Informatico Giovanni Paolo II</p>
-                    <p class="text-white text-lg">Diploma Tecnico Informatico</p>
+                    <Formation/>
+                    <FormationAccordion/>
                 </div>
                 <!-- Esperienza -->
                 <div id="card-5" class="neu-flat lg:col-span-4 lg:row-span-1 rounded-xl p-6 lg:flex items-center">

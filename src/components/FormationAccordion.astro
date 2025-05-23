@@ -6,17 +6,17 @@ import udemy from '../images/udemy.png'
 ---
 
 <!-- Accordion start -->
-<ul class="accordion-cert w-full block lg:hidden">
+<ul class="accordion-formation w-full block lg:hidden">
     <p class="text-3xl text-white font-bold mb-4">Certificazioni</p>
     <!-- List -->
     <li class="cursor-pointer mb-4">
         <!-- Row -->
             <span class="text-green-cyber flex place-content-between items-center w-auto">
                 <span class="flex gap-2">
-                    <p class="font-bold text-lg">UX/UI Design Start</p>
+                    <p class="font-bold text-lg">LabForTraining</p>
                     <!-- Badge -->
                     <span class="neu-up w-auto lg:w-52 border border-slate-100/10 rounded-md flex items-center justify-self-start justify-center place-content-between px-2 py-1">
-                        <span class="text-white text-xs">2024</span>
+                        <span class="text-white text-xs">2018 - 2019</span>
                     </span>
                 </span>
                 <svg class="text-green-cyber mr-1 justify-self-end"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
@@ -24,9 +24,7 @@ import udemy from '../images/udemy.png'
                 </svg>
             </span>
         <div id="list" class="text-gray-500 text-md">
-            <span class="neu-inset w-24 lg:w-52 rounded-full flex items-center justify-center place-content-between px-2 py-1 mt-1 mb-2">
-                <img class="w-[70%] text-center" src={eyestudio.src}>
-            </span>
+            <p class="text-white text-base mb-2">Corso Web Design (320 ore)</p>
             <ul class="text-white text-sm list-disc list-inside w-full mb-6">
                 <li>
                     Basi della User Experience
@@ -141,24 +139,24 @@ import udemy from '../images/udemy.png'
 
 
 <style>
-.accordion-cert li > div {
+.accordion-formation li > div {
 display: none;
 }
 
-.accordion-cert .flipY {
+.accordion-formation .flipY {
 transform: rotate3d(1, 0, 0, 180deg);
 }
 
-.accordion-cert svg {
+.accordion-formation svg {
 transition: all 1s cubic-bezier(0, .5, 0, 1);
 }
 </style>
 
 <script>
-// Questo script verrà inviato al browser
+// // Questo script verrà inviato al browser
 import $ from 'jquery';
 
-$(document).on('click', '.accordion-cert li', function(e) {
+$(document).on('click', '.accordion-formation li', function(e) {
 // Trova il div all'interno dell'elemento cliccato e applica slideToggle
 $(this).find('div').slideToggle();
 // Trova l'elemento svg all'interno dell'elemento cliccato e applica toggleClass

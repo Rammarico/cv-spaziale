@@ -1,0 +1,79 @@
+---
+
+---
+<div class="container-form hidden lg:block">
+    <p class="text-xl text-white font-bold mb-4">Formazione</p>
+    <div class="tooltip-form hidden absolute top-0 right-0 text-xs text-white rounded-md px-2 py-1 border border-500/20">
+        Puoi scrollare!
+    </div>
+    <div class="wrapper px-1 py-2">
+        <div class="mb-2 flex items-center">
+            <span class="text-2xl text-green-cyber font-bold mr-4">Labfortraining</span>
+            <div class="neu-up max-w-fit flex lg:w-52 rounded-md border border-slate-100/10 items-center justify-center place-content-between px-4 py-1">
+                <span class="text-white text-xs text-center">2018 - 2019</span>
+            </div>
+        </div>
+        <p class="text-white text-base mb-2">Corso Web Design (320 ore)</p>
+        <ul class="text-white text-sm list-disc list-inside w-full mb-4">
+            <li>
+                Basi della User Interface
+            </li>
+            <li>
+                Creazione di un layout tramite HTML e CSS
+            </li>
+            <li>
+                Javascript
+            </li>
+            <li>
+                Creazione di un progetto  
+            </li>
+        </ul>
+        <div class="mb-2 flex items-center">
+            <p class="text-2xl text-green-cyber font-bold mr-4">I.T.I. G.P. II</p>
+            <div class="neu-up max-w-fit flex lg:w-52 rounded-md border border-slate-100/10 items-center justify-center place-content-between px-4 py-1">
+                <span class="text-white text-xs text-center">2006 - 2012.</span>
+            </div>
+        </div>
+        <p class="text-white text-base mb-2">Diploma Tecnico Informatico</p>
+        <ul class="text-white text-sm list-disc list-inside w-full">
+            <li>
+                Basi di HTML e CSS
+            </li>
+            <li>
+                Basi della creazione di un database
+            </li>
+            <li>
+                Creazione single page
+            </li>
+        </ul>
+    </div>
+    </div>
+
+<style>
+.container-form {
+        @apply w-full h-full overflow-hidden relative;
+}
+.wrapper {
+    @apply h-[80%] overflow-y-auto border-y border-slate-500/50 py-4 px-2;
+    scrollbar-width: none;
+}
+</style>
+
+<script>
+import $ from 'jquery';
+
+$(document).ready(function() {
+// Mostra il tooltip al passaggio del mouse sul div padre
+$('.container-form').hover(
+    function() {
+        $('.tooltip-form').fadeIn(200); // Mostra il tooltip
+
+    },
+    function() {
+
+        $('.tooltip-form').fadeOut(200); // Nasconde il tooltip
+    }
+);
+
+});
+</script>

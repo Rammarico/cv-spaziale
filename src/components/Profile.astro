@@ -1,0 +1,70 @@
+---
+import fotoProfilo from '../images/foto_profilo.jpg';
+import { CircleAlert, MapPin, Phone, MapPinCheck, Mail, Linkedin, CircleFadingPlus, GraduationCap, Accessibility } from "lucide-preact";
+---
+
+    <div id="pic" class="flex items-center justi mb-4">
+        <div>
+            <img class="w-32 lg:w-28 rounded-lg aspect-square object-cover border border-green-cyber grayscale" src={fotoProfilo.src}>
+        </div>
+        <div class="pl-4">
+            <!-- <div class="neu-up border border-slate-500/50 w-auto lg:w-48 mb-4 rounded-full flex items-center justify-center place-content-between px-1 py-2">
+                <CircleAlert color="red" size={14} />
+                <span class="text-white ml-4 text-xs">Attualmente occupato</span>
+            </div> -->
+            <div class="badge badge-soft badge-error mb-2">
+                <CircleAlert color="#F85F7A" size={14} />
+                Attualmente occupato
+            </div>
+            <h1 class="text-white text-xl lg:text-2xl font-bold lg:mb-1">Andrea Spuri</h1>
+            <h4 class="text-white text-lg lg:text-lg">Web <span class="text-green-cyber">Designer</span></h4>
+        </div>
+    </div>
+        <div id="info" class="gap-1 lg:gap-2 flex flex-row flex-wrap lg:items-center">
+                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-2 py-2">
+                    <MapPin color="#93fe0e" size={16} />
+                    <span class="text-white ml-2 text-xs lg:text-md">Roma</span>
+                </div>
+                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
+                    <Phone color="#93fe0e" size={16} />
+                    <span class="text-white ml-2 text-xs lg:text-md">392 3777 387</span>
+                </div>
+                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
+                    <MapPinCheck color="#93fe0e" size={16} />
+                    <span class="text-white ml-2 text-xs lg:text-md">Via Vincenzo Petra 151</span>
+                </div>
+            
+            
+                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
+                    <Mail color="#93fe0e" size={16} />
+                    <span class="text-white ml-2 text-xs lg:text-md">spuriandrea@gmail.com</span>
+                </div>
+                <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-4 py-2">
+                    <Linkedin color="#93fe0e" size={16} />
+                    <span class="text-white ml-2 text-xs lg:text-md">linkedin.com/in/andreaspuri</span>
+                </div>
+               
+
+                <!-- Modale -->
+                <dialog id="my_modal_1" class="modal">
+                <div class="modal-box bg-background">
+                    <div class="flex gap-2 items-center">
+                        <Accessibility color="#93fe0e" size={22}/>
+                        <h3 class="text-lg font-bold flex">ATTENZIONE!</h3>
+                    </div>
+                    <p class="py-4">Appartenente alle categorie protette (L. 68/99)</p>
+                    <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn neu-up px-4 py-2 text-white">Chiudi</button>
+                    </form>
+                    </div>
+                </div>
+                </dialog>
+                
+        </div>
+        
+        <button onclick="my_modal_1.showModal()" class="btn neu-up lg:neu-up-dist w-full border border-slate-500/50 lg:w-[100px] rounded-md flex items-center justify-center place-content-between px-2 py-2 gap-2">
+            <span class="text-white ml-2 text-xs lg:text-md">SPOILER</span>
+            <CircleFadingPlus color="#93fe0e" size={16} />
+        </button>
