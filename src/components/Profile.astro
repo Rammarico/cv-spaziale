@@ -20,7 +20,7 @@ import { CircleAlert, MapPin, Phone, MapPinCheck, Mail, Linkedin, CircleFadingPl
             <h4 class="text-white text-lg lg:text-lg">Web <span class="text-green-cyber">Designer</span></h4>
         </div>
     </div>
-        <div id="info" class="gap-1 lg:gap-2 flex flex-row flex-wrap lg:items-center">
+        <div id="info" class="gap-1 lg:gap-2 lg:mb-4 flex flex-row flex-wrap lg:items-center">
                 <div class="neu-up w-auto mb-4 lg:mb-2 rounded-full flex items-center justify-center place-content-between px-2 py-2">
                     <MapPin color="#93fe0e" size={16} />
                     <span class="text-white ml-2 text-xs lg:text-md">Roma</span>
@@ -64,7 +64,14 @@ import { CircleAlert, MapPin, Phone, MapPinCheck, Mail, Linkedin, CircleFadingPl
                 
         </div>
         
-        <button onclick="my_modal_1.showModal()" class="btn neu-up lg:neu-up-dist w-full border border-slate-500/50 lg:w-[100px] rounded-md flex items-center justify-center place-content-between px-2 py-2 gap-2">
+        <button onclick="my_modal_1.showModal()" class="hover:animate-scale btn neu-up lg:neu-up-dist w-full border border-slate-500/50 lg:w-[100px] rounded-md flex items-center justify-center place-content-between px-2 py-2 gap-2">
             <span class="text-white ml-2 text-xs lg:text-md">SPOILER</span>
             <CircleFadingPlus color="#93fe0e" size={16} />
         </button>
+        <div class="animate-fade-in">
+  Fade in box
+</div>
+
+<div class="animate-slide-in-bottom animate-delay-300 animate-duration-slow">
+  Slow animation after 300ms to slide in from bottom
+</div>

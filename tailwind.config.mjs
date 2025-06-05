@@ -23,6 +23,7 @@ export default {
 	plugins: [
 		require('tailwindcss'),
 		require('autoprefixer'),
-		require('daisyui')
+		require('daisyui'),
+		require('@midudev/tailwind-animations'),
 	],
 }
